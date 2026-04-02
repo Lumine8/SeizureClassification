@@ -2,6 +2,23 @@
 
 This project builds seizure-type classification models from EEG-derived features.
 
+## Model Focus
+
+This project is focused on **seizure classification** using a deep learning architecture based on:
+
+- **BiLSTM (Bidirectional LSTM)** for temporal feature learning from EEG sequences
+- **Attention mechanism** to highlight the most informative time steps/features before final classification
+
+Typical workflow for this setup:
+
+1. Load and preprocess EEG-derived features
+2. Reshape features into sequence format for recurrent modeling
+3. Train a BiLSTM encoder
+4. Apply attention weighting over sequence outputs
+5. Classify into seizure classes using a dense output layer
+
+This combines sequence modeling (BiLSTM) with interpretability and better focus (Attention).
+
 ## Dataset Used by the Training Code
 
 The preprocessing function loads this file:
